@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View, Image, ImageBackground, StyleSheet } from "react-native";
 import SplashStyles from "../styles/SplashStyles";
 
-/*Images*/
+/*images*/
 import logo from "../assets/logo.png";
 import splashBg from "../assets/splashBg.png";
 
@@ -17,7 +17,6 @@ const SplashComponent = () => {
         alignItems: "center",
       }}>
         <Image source={logo} />
-
     </View>
     </ImageBackground>
   );

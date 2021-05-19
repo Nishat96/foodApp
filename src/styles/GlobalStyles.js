@@ -1,27 +1,18 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-  splashLogo: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
+  foodImg: {
+    width: 170,
+    height: 170,
   },
 
-  searchBar: {
-    backgroundColor:'#68a0cf',
-    borderRadius:30,
-    borderWidth: 1,
-    borderColor: '#fff',
-    width: 314,
-    marginTop: 20,
-    marginLeft: 20,
-    paddingLeft: 50
+  flexRow: {
+    flexDirection: "row"
   },
 
-  titleBar: {
-    fontSize: 30,
-    fontWeight: "bold"
+  footerArea:{
+    justifyContent: "space-evenly",
+    paddingTop: 90
   }
 
-
-});
+})
