@@ -8,7 +8,6 @@ import splashBg from "../assets/splashBg.png";
 
 const SplashComponent = ({navigation}) => {
   useEffect(() => {
-    console.log('hiii');
     setTimeout(() => {
       navigation.navigate('Home')
     }, 3000);
