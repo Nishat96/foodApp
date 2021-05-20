@@ -40,6 +40,17 @@ export default StyleSheet.create({
     paddingLeft: 50,
     fontWeight: "bold",
     color: "#fff",
+  },
+
+  profileBtn: {
+    backgroundColor: "#fffefe",
+    width: 180,
+    borderRadius: 20,
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingLeft: 50,
+    fontWeight: "bold",
+    color: "#000000",
   }
 
 })

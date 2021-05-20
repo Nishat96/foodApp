@@ -1,6 +1,8 @@
 import React from "react";
 import { Text, View, Image, ScrollView } from "react-native";
 import GlobalStyles from "../styles/GlobalStyles";
+
+/*images*/
 import buffeloSauce from "../assets/buffeloSauce.jpg";
 import pizzaSauce from "../assets/pizzaSauce.jpg";
 import chipotleSauce from "../assets/chipotleSauce.jpg";

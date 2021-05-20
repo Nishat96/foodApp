@@ -6,7 +6,6 @@ import SplashStyles from "../styles/SplashStyles";
 import logo from "../assets/logo.png";
 import splashBg from "../assets/splashBg.png";
 
-
 const SplashComponent = ({navigation}) => {
   useEffect(() => {
     console.log('hiii');

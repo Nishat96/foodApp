@@ -5,7 +5,6 @@ import eggRice from "../assets/eggRice.png";
 import plainRice from "../assets/rice.png";
 import chawmin from "../assets/chawmin.png";
 import veggieTomato from "../assets/veggieTomato.png";
-import HomeStyles from "../styles/HomeStyles";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 const FoodComponent = ({navigation}) => {

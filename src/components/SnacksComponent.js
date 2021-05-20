@@ -1,12 +1,14 @@
 import React from "react";
 import { Text, View, Image, ScrollView } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 import GlobalStyles from "../styles/GlobalStyles";
+
+/*images*/
 import burger from "../assets/burger.jpg";
 import pizza from "../assets/pizza.jpg";
 import nuggets from "../assets/nuggets.jpg";
 import meetBall from "../assets/meetball.jpg";
 import sub from "../assets/sub.jpg";
-import { TouchableOpacity } from "react-native-gesture-handler";
 
 const SnacksComponent = ({ navigation }) => {
   return (

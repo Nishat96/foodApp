@@ -8,6 +8,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 /*images*/
 import veggieImg from "../assets/veggie.png";
 import spicyChicken from "../assets/spicyChicken.png";
+
 import FooterComponent from "./FooterComponent";
 
 const HomeComponent = ({navigation}) => {
