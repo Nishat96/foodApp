@@ -1,15 +1,31 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-import GlobalStyles from './src/styles/HomeStyles';
-import SplashComponent from "./src/components/SplashComponent";
 import HomeComponent from "./src/components/HomeComponent";
+import ProfileComponent from "./src/components/ProfileComponent";
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import FooterComponent from "./src/components/FooterComponent";
+import SplashComponent from "./src/components/SplashComponent";
+import FoodComponent from "./src/components/FoodComponent";
+import DrinksComponent from "./src/components/DrinksComponent";
+import SnacksComponent from "./src/components/SnacksComponent";
+import SauceComponent from "./src/components/SauceComponent";
 
-const FoodApp = () => {
+const Stack = createStackNavigator();
+
+const App = () => {
   return (
-    <View >
-       {/*<SplashComponent/>*/}
-      <HomeComponent/>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRoute="SplashScreen">
+        <Stack.Screen name="Splash Screen" component={SplashComponent} options={{headerShown: false}} />
+        <Stack.Screen name="Home" component={HomeComponent} options={{headerShown: false}}/>
+        <Stack.Screen name="Foods" component={FoodComponent}/>
+        <Stack.Screen name="Drinks" component={DrinksComponent}/>
+        <Stack.Screen name="Snacks" component={SnacksComponent}/>
+        <Stack.Screen name="Sauce" component={SauceComponent}/>
+        <Stack.Screen name="Profile" component={ProfileComponent} />
+        <Stack.Screen name="Footer" component={FooterComponent} />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
-export default FoodApp;
+export default App;

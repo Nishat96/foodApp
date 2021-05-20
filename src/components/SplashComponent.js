@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Text, View, Image, ImageBackground, StyleSheet } from "react-native";
 import SplashStyles from "../styles/SplashStyles";
 
@@ -7,8 +7,21 @@ import logo from "../assets/logo.png";
 import splashBg from "../assets/splashBg.png";
 
 
-const SplashComponent = () => {
+const SplashComponent = ({navigation}) => {
+  useEffect(() => {
+    console.log('hiii');
+    setTimeout(() => {
+      navigation.navigate('Home')
+    }, 3000);
+  }, [])
+
   return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}>
     <ImageBackground source={splashBg} style={SplashStyles.bgImage}>
     <View
       style={{
@@ -19,6 +32,7 @@ const SplashComponent = () => {
         <Image source={logo} />
     </View>
     </ImageBackground>
+    </View>
   );
 };
 

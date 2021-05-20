@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Text, View, TextInput, TouchableOpacity, Image } from "react-native";
+import { Text, View, TextInput, Image, ScrollView } from "react-native";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import HomeStyles from "../styles/HomeStyles";
 import GlobalStyles from "../styles/GlobalStyles";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 /*images*/
 import veggieImg from "../assets/veggie.png";
@@ -11,7 +12,7 @@ import FooterComponent from "./FooterComponent";
 
 const HomeComponent = ({navigation}) => {
   return (
-    <View>
+    <ScrollView>
       <View style={HomeStyles.notificationBar}>
         <FontAwesome5 style={{ flex: 3 }} name={"bars"} size={25} color="#C0C0C0" />
         <FontAwesome5 style={{ flex: 1 }} name={"cart-plus"} size={25} color="#C0C0C0" />
@@ -23,16 +24,16 @@ const HomeComponent = ({navigation}) => {
         <FontAwesome5 style={{ paddingRight: 20 }} name={"search"} size={20} color="#C0C0C0" />
       </View>
       <View style={{ flexDirection: "row", paddingTop: 20 }}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('Foods')}>
           <Text style={HomeStyles.navTitle}>Foods</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('Drinks')}>
           <Text style={HomeStyles.navTitle}>Drinks</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('Snacks')}>
           <Text style={HomeStyles.navTitle}>Snacks</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('Sauce')}>
           <Text style={HomeStyles.navTitle}>Sauce</Text>
         </TouchableOpacity>
       </View>
@@ -54,9 +55,9 @@ const HomeComponent = ({navigation}) => {
         </View>
       </View>
       <View>
-        <FooterComponent/>
+        <FooterComponent navigation={navigation}/>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 export default HomeComponent;
